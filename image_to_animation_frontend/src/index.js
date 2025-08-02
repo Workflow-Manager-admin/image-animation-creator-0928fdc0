@@ -3,10 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './design-system.css';
 import App from './App';
+import PricingPage from './PricingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+
+// Simple demo routing (replace with react-router for real multipage apps)
+function RootRouter() {
+  const [route, setRoute] = React.useState(
+    window.location.pathname.includes('pricing') ? "pricing" : "main"
+  );
+
+  React.useEffect(() => {
+    const handler = () => setRoute(
+      window.location.pathname.includes('pricing') ? "pricing" : "main"
+    );
+    window.addEventListener("popstate", handler);
+    return () => window.removeEventListener("popstate", handler);
+  }, []);
+
+  // Render Pricing page if /pricing route, else normal app and cover
+  if (route === "pricing") {
+    return <PricingPage />;
+  }
+  return (
     <>
       <div style={{
         width: '100vw',
@@ -85,8 +104,28 @@ root.render(
           </div>
         </div>
       </div>
+      {/* Demo: Add a button to navigate to pricing for demonstration */}
+      <div style={{ width: "100%", textAlign: "center", marginTop: 18 }}>
+        <button
+          style={{
+            background: "var(--color-f26a1b)", color: "#fff",
+            border: "none", borderRadius: 8, padding: "10px 30px",
+            fontWeight: 600, fontSize: 18, letterSpacing: ".03em",
+            boxShadow: "0 3px 10px #e15e0d22", marginTop: 20, cursor: "pointer"
+          }}
+          onClick={() => { window.history.pushState({}, "", "/pricing"); setRoute("pricing"); }}
+        >
+          View Pricing Page
+        </button>
+      </div>
       {/* Main application */}
       <App />
     </>
+  );
+}
+
+root.render(
+  <React.StrictMode>
+    <RootRouter />
   </React.StrictMode>
 );
