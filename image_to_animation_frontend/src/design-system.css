@@ -1,0 +1,124 @@
+:root {
+  /* COLORS */
+  --color-252020: #252020;
+  --color-f26a1b: #f26a1b;
+  --color-dedcdd: #dedcdd;
+  --color-ffffff: #ffffff;
+  --color-231f20: #231f20;
+  --color-ff9358: #ff9358;
+  --color-f4b25a: #f4b25a;
+  --color-b3b3b3: #b3b3b3;
+  --color-e15e0d: #e15e0d;
+  --color-4997b3: #4997b3;
+  --color-f57732: #f57732;
+  --color-484546: #484546;
+  --color-d9d9d9: #d9d9d9;
+  --color-767172: #767172;
+  --color-424242: #424242; /* fallback */
+  --color-dedcdd: #dedcdd;
+  --color-d1d5db: #d1d5db;
+  --color-ffefe4: #ffefe4;
+  --color-d7d7d7: #d7d7d7;
+  --color-fdf7f2: #fdf7f2;
+  --color-241f20: #241f20;
+  --color-242020: #242020;
+  --color-ceb7ab: #ceb7ab;
+  --color-85a5ee: #85a5ee;
+  /* ... add more as referenced ... */
+
+  /* BORDER RADII */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-9: 9px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-13: 13px;
+  --radius-16: 16px;
+  --radius-18: 18px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-30: 30px;
+  --radius-32: 32px;
+  --radius-40: 40px;
+  --radius-44: 44px;
+  --radius-48: 48px;
+  --radius-72: 72.5925px;
+  --radius-100: 100px;
+  --radius-999: 999px;
+
+  /* TYPOGRAPHY */
+  --font-inter: 'Inter', Arial, sans-serif;
+  --font-urbanist: 'Urbanist', Arial, sans-serif;
+  --font-hind: 'Hind', Arial, sans-serif;
+  --font-codicon: 'codicon', Arial, sans-serif;
+
+  /* Sample font sizes for reference (do not use directly, map in typography utility classes) */
+  --font-size-10: 10px;
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-16: 16px;
+  --font-size-17: 17px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-21: 21px;
+  --font-size-24: 24px;
+  --font-size-27: 27px;
+  --font-size-28: 28px;
+  --font-size-32: 32px;
+  --font-size-34: 34px;
+  --font-size-38: 38px;
+  --font-size-40: 40px;
+  --font-size-44: 44px;
+  --font-size-48: 48px;
+  --font-size-53: 54px;
+  --font-size-56: 56px;
+  --font-size-70: 70px;
+  --font-size-80: 80px;
+}
+
+/* UTILITY CLASSES FOR TYPOGRAPHY (based on design system tokens) */
+/* Example usage: <div class="typo-292">text</div> */
+.typo-291 {
+  font-family: var(--font-inter);
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 70.2px;
+  letter-spacing: 0;
+  color: var(--color-ffffff)
+}
+.typo-290 {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.14px;
+  color: var(--color-dedcdd)
+}
+.typo-292 {
+  font-family: var(--font-inter);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 62.4px;
+  letter-spacing: 0;
+  color: var(--color-ffffff)
+}
+.typo-293 {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: var(--color-dedcdd)
+}
+/* ... add typography classes as referenced in the screens ... */
+
+body {
+  background: var(--color-231f20);
+  color: var(--color-ffffff);
+  font-family: var(--font-inter);
+  margin: 0;
+}

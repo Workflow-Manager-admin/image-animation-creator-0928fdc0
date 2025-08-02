@@ -1,8 +1,9 @@
+@import url('./design-system.css');
+
 :root {
-  /* Modern, minimal light theme */
-  --primary: #1976d2;
+  --primary: #1976D2;
   --secondary: #424242;
-  --accent: #ff4081;
+  --accent: #FF4081;
   --bg: #f6f7fb;
   --bg-card: #fff;
   --border: #e6e6ea;
@@ -12,6 +13,8 @@
   --error-text: #d6002f;
   --shadow: 0 4px 24px 0 #1976d221, 0 1.5px 2px #42424211;
 }
+
+/* Additional styles remain unchanged... */
 
 body, html {
   background: var(--bg);
